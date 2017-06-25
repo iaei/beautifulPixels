@@ -3,6 +3,19 @@ html,body,h1,h2,h3,h4,h5,h6,p,ul,li {
 	padding:0;
 
 }
+ 
+a {
+	text-decoration: none;
+}
+
+a:visited {
+	color:#eee;
+}
+
+
+a:link {
+	color: #eee;
+}
 
 h3 {
 	font-size: 20px;
@@ -41,10 +54,12 @@ header {
 	height: 150px;
 	background-color:#33363b;
 	width: 100%;
+	transition: all .3s ease;
 }
  
 nav {
 	display: flex;
+	width: 100%;
 	justify-content: center;
 	height: 44px;
 	color: #ccc;
@@ -64,6 +79,7 @@ nav>ul {
 	width: 194px;
 	overflow: hidden;
 	position: absolute;
+	z-index: 3;
 	margin-top: 14px;
 	margin-left: -14px;
 	background-color: #26272b;
@@ -85,7 +101,7 @@ nav >ul li {
 	font-size: 15px;
 	text-align: center;
 	padding: 14px;
-	transition: color .2s ease;
+	transition: all .2s ease;
 
 }
 
@@ -113,6 +129,7 @@ main {
 	margin: 0 auto 60px;
 	margin-top: -60px;
 	background-color: #fff;
+	position: relative;
 
 
 }
@@ -122,6 +139,7 @@ main article {
 	flex: 1;
 	padding:35px;
 	padding-top: 80px;
+	margin-right: 340px;
 }
 
 
@@ -185,6 +203,11 @@ main aside {
 	width: 340px;
 	display: flex;
 	flex-direction: column;
+	position: absolute;
+	width: 340px;	
+	right: 0;
+	top: 0;
+	bottom: 0;
 	
 }
 
@@ -210,6 +233,7 @@ main aside div.contact {
 	
 	height: 60px;
 	background-color: #3b8dbd;
+	/*position: relative;*/
 }
 
 main aside .subtitle li {
@@ -315,3 +339,212 @@ footer .subList li:last-child {
 	background-color: #33363b;
 }
 
+
+#CforAside {
+	margin:0;
+	cursor: pointer;
+	border: none;
+	opacity: 0;
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	height: 60px;
+	width: 50px;
+	display: none;
+
+}
+
+#CforAside+a {
+	position: absolute;
+	display: flex;
+	top: 0;
+	right: 0;
+	height: 60px;
+	width: 50px;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+
+
+}
+#CforAside+a i {
+	position: absolute;
+	color: #eee;
+	display: none;
+
+}
+
+#CforAside:checked ~ aside{
+	width: 340px;
+	
+}
+
+
+#CforAside:checked ~ aside div ul.subtitle{
+	display: block;
+}
+
+
+#CforNav {
+	margin:0;
+	cursor: pointer;
+	border: none;
+	opacity: 0;
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	height: 60px;
+	width: 50px;
+	display: none;
+
+}
+
+#CforNav+a {
+	position: absolute;
+	display: flex;
+	top: 0;
+	left: 0;
+	height: 60px;
+	width: 50px;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+
+
+}
+#CforNav+a i {
+	position: absolute;
+	color: #eee;
+	display: none;
+
+}
+
+#CforNav:checked ~header {
+	height:410px;
+}
+
+#CforNav:checked {
+	display: block;
+}
+
+#CforNav:checked+a i {
+	display: block;
+	color:rgba(255,255,255,0.5);
+
+}
+
+#CforNav:checked ~header nav{
+	display: block;
+	padding-top: 45px;
+
+}
+
+#CforNav:checked ~header nav ul {
+	flex-direction: column;
+}
+
+#CforNav:checked ~header nav li {
+	width: 100%;
+	text-align: left;
+	padding-left: 70px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+#CforNav:checked ~header nav .more {
+	height: 150px;
+}
+
+#CforNav:checked ~header nav .subList {
+	position: static;
+	transform: scaleY(1);
+	background-color: transparent;
+	
+}
+
+
+#CforNav:checked ~header nav .subList li {
+	padding-left:0;
+}
+#CforNav:checked ~header nav .subList {
+	margin-left:40px;
+}
+
+@media only screen and (min-width:480px) and (max-width:960px) {
+	#CforAside {
+		display: block;
+	}
+
+	#CforAside+a i {
+		display: block;
+	}
+	main aside {
+		width: 50px;
+		transition: all .3s ease;
+	}
+
+	main aside .subtitle{
+
+		display: none;
+		transition-delay:all .3s;
+	}
+
+	main article {
+		margin-right:50px;
+	}
+
+	footer div:first-child {
+		display: none;
+	}
+}
+
+
+@media only screen and (max-width: 479px) {
+	#wrap main aside {
+		position: static;
+		width: 100%;
+
+	}
+
+	#wrap main {
+		flex-direction: column;
+	}
+
+	main article {
+		margin-right: 0;
+	}
+
+	footer div:first-child {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	nav {
+		display: none;
+	
+
+	}
+	#CforNav {
+		display: block;
+	}
+
+	#CforNav+a i {
+		display: block;
+		color:rgba(255,255,255,0.5);
+	}
+
+	nav ul {
+		flex-direction: column;
+		width: 100%;
+	
+		
+	}
+
+	nav ul li {
+		flex: 1;
+	}
+
+}
