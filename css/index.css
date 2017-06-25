@@ -1,0 +1,317 @@
+html,body,h1,h2,h3,h4,h5,h6,p,ul,li {
+	margin: 0;
+	padding:0;
+
+}
+
+h3 {
+	font-size: 20px;
+	color: #000;
+	font-weight: 400;
+	margin-bottom: 20px;
+}
+
+h2 {
+	font-size: 26px;
+	font-weight: 400;
+	margin-bottom:20px;
+	cursor: pointer;
+	transition: color .2s ease;
+
+}
+
+
+h2:hover {
+	color: #3b8dbd;
+}
+
+
+body,html {
+	background-color: #eaeaea;
+	width: 100%;
+	height: 100%;
+}
+
+ul,li {
+	list-style: none;
+}
+
+header {
+	padding-bottom: 50px;
+	height: 150px;
+	background-color:#33363b;
+	width: 100%;
+}
+ 
+nav {
+	display: flex;
+	justify-content: center;
+	height: 44px;
+	color: #ccc;
+}
+
+nav>ul {
+	display: flex;
+	width: 640px;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.subList {
+	height: 147px;
+	transform-origin: top center;
+	transform: scaleY(0);
+	width: 194px;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 14px;
+	margin-left: -14px;
+	background-color: #26272b;
+	transition: all .2s ease;
+
+}
+
+
+.subList li {
+	border-bottom: 1px solid #333;
+	color: #ccc;
+
+
+}
+
+
+nav >ul li {
+	cursor: pointer;
+	font-size: 15px;
+	text-align: center;
+	padding: 14px;
+	transition: color .2s ease;
+
+}
+
+nav >ul>li:hover {
+	background-color: rgba(0,0,0,0.1);
+	color: #fff;
+}
+
+nav .more:hover>.subList {
+	transform: scaleY(1);
+
+}
+
+nav .more .subList li:hover {
+	color: #fff;
+}
+
+#wrap {
+	padding: 0 10px;
+}
+
+main {
+	max-width: 1120px;
+	display: flex;
+	margin: 0 auto 60px;
+	margin-top: -60px;
+	background-color: #fff;
+
+
+}
+
+
+main article {
+	flex: 1;
+	padding:35px;
+	padding-top: 80px;
+}
+
+
+main #above {
+	height: 59px;
+	border-bottom: 1px solid #eee;
+	margin: -80px -35px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #aaa;
+
+}
+
+main #above p {
+	font-weight: 600;
+	font-size: 15px;
+}
+
+main article section {
+	padding:30px 0;
+	border-bottom: 1px solid #eee;
+}
+
+main article section img {
+	height: 100%;
+	width: 100%;
+}
+main article section p {
+	font-size: 14px;
+	color: #555;
+	line-height: 1.6em;
+}
+
+main article section>div:first-child {
+	cursor: pointer;
+	position: relative;
+
+}
+
+main article section>div:first-child::after {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	transition: all .5s ease;
+	
+}
+
+main article section>div:first-child:hover::after {
+	background-color: rgba(255,255,255,0.2);
+}
+
+main article section>div:first-child:hover+div>h2 {
+	color: #3b8dbd;
+}
+
+main aside {
+	width: 340px;
+	display: flex;
+	flex-direction: column;
+	
+}
+
+main aside div {
+	display: flex;
+	justify-content: center;
+
+}
+
+main aside div:nth-child(2){
+	padding:35px 20px;
+	background-color: #f0f0f0;
+	flex: 1;
+	
+
+}
+
+main aside div:nth-child(2) ul {
+	flex: 1;
+}
+
+main aside div.contact {
+	
+	height: 60px;
+	background-color: #3b8dbd;
+}
+
+main aside .subtitle li {
+	border-bottom: 1px solid #e4e4e4;
+	padding-bottom: 5px;
+	color: #777;
+	cursor: pointer;
+
+}
+
+main aside .subtitle li:hover {
+	color:#666;
+}
+
+main aside .subtitle li i {
+	margin-right: 10px;
+	height: 24px;
+	width: 16px;
+}
+
+footer >div:first-child {
+	height: 512px;
+	background-color: #fff;
+	display: flex;
+	padding:40px 40px 0;
+	justify-content: center;
+
+}
+
+footer>div>ul {
+	display: flex;
+	flex-direction: row;
+	width: 1120px;
+	font-size: 13px;
+	
+
+	
+}
+
+footer>div>ul>li {
+	padding:15px;
+
+}
+
+footer>div>ul h3{
+	flex: 1;
+	
+}
+
+.subtitle li {
+	margin: 10px 0;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #eee;
+	color: #888;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.subtitle li:hover {
+	color: #3b8dbd;
+}
+
+
+footer nav {
+	background-color: #fff;
+	border-top: 1px solid #eee;
+	color: #888;
+}
+
+
+footer nav >ul li:hover {
+	color: #666;
+}
+
+
+
+footer .subList {
+	transform-origin: bottom center;
+	margin-top: -180px;
+	margin-left: -14px;
+	background-color: #e5e5e5;
+	transition: all .2s ease;
+
+
+
+}
+
+footer .subList li {
+	color: #888;
+	border-bottom: 1px solid #ccc;
+}
+
+footer nav .more .subList li:hover {
+	color: #555;
+}
+
+footer .subList li:last-child {
+	border: none;
+}
+
+#right {
+	min-height: 168px;
+	background-color: #33363b;
+}
+
