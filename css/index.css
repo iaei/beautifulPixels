@@ -125,6 +125,7 @@ nav .more .subList li:hover {
 
 main {
 	max-width: 1120px;
+	min-width: 340px;
 	display: flex;
 	margin: 0 auto 60px;
 	margin-top: -60px;
@@ -545,6 +546,10 @@ footer .subList li:last-child {
 
 	nav ul li {
 		flex: 1;
+	}
+
+	h2 {
+		font-size: 20px;
 	}
 
 }
