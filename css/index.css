@@ -1,7 +1,15 @@
+* {
+	-webkit-tap-highlight-color:transparent;
+}
 html,body,h1,h2,h3,h4,h5,h6,p,ul,li {
 	margin: 0;
 	padding:0;
 
+
+}
+
+body {
+	min-width: 310px;
 }
  
 a {
@@ -125,12 +133,12 @@ nav .more .subList li:hover {
 
 main {
 	max-width: 1120px;
-	min-width: 340px;
 	display: flex;
 	margin: 0 auto 60px;
 	margin-top: -60px;
 	background-color: #fff;
 	position: relative;
+	width: 100%;
 
 
 }
