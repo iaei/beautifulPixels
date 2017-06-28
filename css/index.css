@@ -81,7 +81,7 @@ nav>ul {
 }
 
 .subList {
-	height: 147px;
+	/*height: 147px;*/
 	transform-origin: top center;
 	transform: scaleY(0);
 	width: 194px;
